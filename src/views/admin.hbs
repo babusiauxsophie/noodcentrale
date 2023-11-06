@@ -1,0 +1,19 @@
+<section class="main-container">
+  <h1>Jouw overzicht</h1>
+  <hr />
+<Section class="function--card">
+  <h2>Mail een reviewer</h2>
+  <ul class="function--card__list">
+    {{#each reviewerItems }}
+        <li class="function__item {{#if (ifEven @key) }}function__item--even{{/if}}">
+          <p class="function__name">
+            {{ firstname }} {{ lastname }}
+          </p>
+          <a class="function__button" href="mailto:{{email}}">
+            Email
+          </a>
+        </li>
+    {{/each}}
+  </ul>
+</Section>
+</section>

@@ -1,0 +1,38 @@
+<section class="main-container">
+  <div class="top-links">
+    <div>
+      <a class="breadcrumb__link" href="/">Dashboard /</a><a class="breadcrumb__link" href="/opnames"> Opnames /</a><a class="breadcrumb__link breadcrumb__link--dark" href="#"> Feedback</a>
+    </div>
+    <div>
+      <button class="return-btn"> <img src="/images/arrowside.svg" alt="arrow"><a href="/opnames">Terug naar overzicht</a></button>
+    </div>
+  </div>
+
+{{#each feedback}}
+
+{{#unless @index}}
+<div class="function--card">
+<audio class="audio" controls>
+  <source src="/audio/{{ recording.soundpath }}">
+</div>
+{{/unless}}
+<h2 id="{{ id }}">Review door: {{ reviewer.firstname }} {{ reviewer.lastname }}</h2>
+<form>
+
+<div class="feedback__tabel function--card">
+
+{{>feedback-table }}
+
+  </div>
+
+
+<div class="feedback__tekst function--card">
+            <label for="comment">
+                Bijkomende opmerkingen:
+            </label>
+
+            <textarea name="comment" id="comment" value="{{ feedback.comment }}" disabled>{{ feedback.comment }}</textarea>
+</div>
+</form>
+{{/each}}
+</section>

@@ -1,0 +1,104 @@
+{{#if feedback}}
+<table>
+
+<th></th>      <th> Ruim onvoldoende </th>     <th> Onvoldoende </th>      <th> Voldoende </th> <th> Goed </th> <th> Zeer goed </th> </tr>
+
+
+  <td class="first__column">Binnen aanvaardbare aannametijd</td>
+    <td><input type="radio" id="RuimOnv" name="aannametijd" value="RuimOnv" disabled {{#if (check feedback.aannametijd 1 )}}checked{{/if}}></td>
+    <td><input type="radio" id="Onv" name="aannametijd" value="Onv" disabled {{#if (check feedback.aannametijd 2 )}}checked{{/if}}></td>      
+    <td><input type="radio" id="Vol" name="aannametijd" value="Vol" disabled {{#if (check feedback.aannametijd 3 )}}checked{{/if}}></td>
+    <td><input type="radio" id="Goed" name="aannametijd" value="Goed" disabled {{#if (check feedback.aannametijd 4 )}}checked{{/if}}></td>
+    <td><input type="radio" id="ZeerG" name="aannametijd" value="ZeerG" disabled {{#if (check feedback.aannametijd 5 )}}checked{{/if}}></td>
+    </tr>
+
+  <td class="first__column">Assertiviteit</td>
+    <td><input type="radio" id="RuimOnv" name="assertiviteit" value="RuimOnv" disabled {{#if (check feedback.assertiviteit 1 )}}checked{{/if}}></td>
+    <td><input type="radio" id="Onv" name="assertiviteit" value="Onv" disabled {{#if (check feedback.assertiviteit 2 )}}checked{{/if}}></td>      
+    <td><input type="radio" id="Vol" name="assertiviteit" value="Vol" disabled {{#if (check feedback.assertiviteit 3 )}}checked{{/if}}></td>
+    <td><input type="radio" id="Goed" name="assertiviteit" value="Goed" disabled {{#if (check feedback.assertiviteit 4 )}}checked{{/if}}></td>
+    <td><input type="radio" id="ZeerG" name="assertiviteit" value="ZeerG" disabled {{#if (check feedback.assertiviteit 5 )}}checked{{/if}}></td>
+    </tr>
+
+  <td class="first__column">Empathie</td>
+  
+    <td><input type="radio" id="RuimOnv" name="empathie" value="RuimOnv" disabled {{#if (check feedback.empathie 1 )}}checked{{/if}}></td>
+    <td><input type="radio" id="Onv" name="empathie" value="Onv" disabled {{#if (check feedback.empathie 2 )}}checked{{/if}}></td>      
+    <td><input type="radio" id="Vol" name="empathie" value="Vol" disabled {{#if (check feedback.empathie 3 )}}checked{{/if}}></td>
+    <td><input type="radio" id="Goed" name="empathie" value="Goed" disabled {{#if (check feedback.empathie 4 )}}checked{{/if}}></td>
+    <td><input type="radio" id="ZeerG" name="empathie" value="ZeerG" disabled {{#if (check feedback.empathie 5 )}}checked{{/if}}></td>
+    
+    </tr>
+        
+  <td class="first__column">Respectvol</td>
+  
+    <td><input type="radio" id="RuimOnv" name="respectvol" value="1" disabled required {{#if (check feedback.respectvol 1 )}}checked{{/if}}></td>
+    <td><input type="radio" id="Onv" name="respectvol" value="2" disabled {{#if (check feedback.respectvol 2 )}}checked{{/if}}></td>      
+    <td><input type="radio" id="Vol" name="respectvol" value="3" disabled {{#if (check feedback.respectvol 3 )}}checked{{/if}}></td>
+    <td><input type="radio" id="Goed" name="respectvol" value="4" disabled {{#if (check feedback.respectvol 4 )}}checked{{/if}}></td>
+    <td><input type="radio" id="ZeerG" name="respectvol" value="5" disabled {{#if (check feedback.respectvol 5 )}}checked{{/if}}></td>
+    
+    </tr>
+
+  <td class="first__column bottom__row">Correcte middelen gealarmeerd</td>
+    <td class="bottom__row"><input type="radio" id="RuimOnv" name="correct" value="RuimOnv" disabled {{#if (check feedback.correct 1 )}}checked{{/if}}></td>
+    <td class="bottom__row"><input type="radio" id="Onv" name="correct" value="Onv" disabled {{#if (check feedback.correct 2 )}}checked{{/if}}></td>      
+    <td class="bottom__row"><input type="radio" id="Vol" name="correct" value="Vol" disabled {{#if (check feedback.correct 3 )}}checked{{/if}}></td>
+    <td class="bottom__row"><input type="radio" id="Goed" name="correct" value="Goed" disabled {{#if (check feedback.correct 4 )}}checked{{/if}}></td>
+    <td class="bottom__row"><input type="radio" id="ZeerG" name="correct" value="ZeerG" disabled {{#if (check feedback.correct 5 )}}checked{{/if}}></td>
+    </tr>
+
+</table>
+{{/if }}
+{{#unless feedback}}
+<table>
+
+<th></th>      <th> Ruim onvoldoende </th>     <th> Onvoldoende </th>      <th> Voldoende </th> <th> Goed </th> <th> Zeer goed </th> </tr>
+
+
+  <td class="first__column">Binnen aanvaardbaare aannametijd</td>
+    <td><input type="radio" id="RuimOnv" name="aannametijd" value="1" required></td>
+    <td><input type="radio" id="Onv" name="aannametijd" value="2" ></td>      
+    <td><input type="radio" id="Vol" name="aannametijd" value="3" ></td>
+    <td><input type="radio" id="Goed" name="aannametijd" value="4" ></td>
+    <td><input type="radio" id="ZeerG" name="aannametijd" value="5" ></td>
+    </tr>
+
+  <td class="first__column">Assertiviteit</td>
+    <td><input type="radio" id="RuimOnv" name="assertiviteit" value="1" required></td>
+    <td><input type="radio" id="Onv" name="assertiviteit" value="2"></td>      
+    <td><input type="radio" id="Vol" name="assertiviteit" value="3"></td>
+    <td><input type="radio" id="Goed" name="assertiviteit" value="4"></td>
+    <td><input type="radio" id="ZeerG" name="assertiviteit" value="5"></td>
+    </tr>
+
+  <td class="first__column">Empathie</td>
+  
+    <td><input type="radio" id="RuimOnv" name="empathie" value="1" required></td>
+    <td><input type="radio" id="Onv" name="empathie" value="2"></td>      
+    <td><input type="radio" id="Vol" name="empathie" value="3"></td>
+    <td><input type="radio" id="Goed" name="empathie" value="4"></td>
+    <td><input type="radio" id="ZeerG" name="empathie" value="5"></td>
+    
+    </tr>
+
+    <td class="first__column">Respectvol</td>
+  
+    <td><input type="radio" id="RuimOnv" name="respectvol" value="1" required></td>
+    <td><input type="radio" id="Onv" name="respectvol" value="2"></td>      
+    <td><input type="radio" id="Vol" name="respectvol" value="3"></td>
+    <td><input type="radio" id="Goed" name="respectvol" value="4"></td>
+    <td><input type="radio" id="ZeerG" name="respectvol" value="5"></td>
+    
+    </tr>
+
+  <td class="first__column bottom__row">Correcte middelen gealarmeerd</td>
+    <td class="bottom__row"><input type="radio" id="RuimOnv" name="correct" value="1" required></td>
+    <td class="bottom__row"><input type="radio" id="Onv" name="correct" value="2"></td>      
+    <td class="bottom__row"><input type="radio" id="Vol" name="correct" value="3"></td>
+    <td class="bottom__row"><input type="radio" id="Goed" name="correct" value="4"></td>
+    <td class="bottom__row"><input type="radio" id="ZeerG" name="correct" value="5"></td>
+    </tr>
+
+</table>
+{{/unless}}

@@ -1,0 +1,33 @@
+<section class="main-container main-container--opnames">
+  <a class="breadcrumb__link" href="/admin">Dashboard /</a><a class="breadcrumb__link breadcrumb__link--dark" href="#"> Categorieën</a>
+  <h2>Categorieën</h2>
+  <hr>
+    <h3>Categorie toevoegen</h3>
+    <form class="form--category" action="/api/categories" method="post">
+        
+        <input type="text" name= "name" placeholder="Categorienaam">
+        <button type="submit" class="function__button function__button--icon funtion__button--green" >
+            <img src="../images/plus.svg" alt="add icon">
+        </button>
+    </form>
+    
+
+
+
+<ul class="function--card__list">
+{{#each categoryItems }}
+  <li id="{{id}}" class="function__item {{#if (ifEven @key) }}function__item--even{{/if}}">
+
+
+          <p class="function__name function__name--gap">
+            {{ id }} {{ name }}
+          </p>
+          <button class="function__button function__button--icon function__button--red" onclick="deleteCategory({{id}})">
+            <img src="../images/delete.svg" alt="delete icon">
+          </button> 
+
+          
+  </li>
+{{/each}}
+</ul>
+</section>

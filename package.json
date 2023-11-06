@@ -1,0 +1,50 @@
+{
+  "name": "eindopdracht--noodcentrale",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/app.js --config nodemon.json",
+    "seed": "node ./src/database/seeders/seeder.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pgmgent-atwork2/project-3---werkstuk-noodcentrale-bavo-sophie-mardoek.git"
+  },
+  "keywords": [
+    "noodcentrale",
+    "opname",
+    "databank"
+  ],
+  "type": "module",
+  "author": "Bavo, Sophie, Mardoek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pgmgent-atwork2/project-3---werkstuk-noodcentrale-bavo-sophie-mardoek/issues"
+  },
+  "homepage": "https://github.com/pgmgent-atwork2/project-3---werkstuk-noodcentrale-bavo-sophie-mardoek#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-validator": "^7.0.1",
+    "handlebars": "^4.7.7",
+    "jest": "^29.5.0",
+    "jsonwebtoken": "^9.0.0",
+    "nodemon": "^2.0.22",
+    "sqlite3": "^5.1.6",
+    "swagger-ui-express": "^4.6.3",
+    "typeorm": "^0.3.16"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@fakerjs/animal": "^2.2.0",
+    "cheerio": "^1.0.0-rc.12",
+    "minimist": "^1.2.8",
+    "node-fetch": "^3.3.1"
+  }
+}

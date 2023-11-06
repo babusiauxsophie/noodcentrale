@@ -1,0 +1,72 @@
+<section class="main-container">
+  <div class="top-links">
+    <div>
+      <a class="breadcrumb__link" href="/">Dashboard /</a><a class="breadcrumb__link" href="/operatoren"> Operatoren
+        /</a><a class="breadcrumb__link breadcrumb__link--dark" href="#"> {{ operator.firstname }} {{ operator.lastname
+        }}</a>
+    </div>
+    <div>
+      <button class="return-btn"> <img src="/images/arrowside.svg" alt="arrow"><a href="/operatoren">Terug naar
+          overzicht</a></button>
+    </div>
+  </div>
+  <h2 id="{{ id }}">Reviews van: {{ operator.firstname }} {{ operator.lastname }}</h2>
+  <hr>
+
+  <section class="function--card">
+    <div class="img--container">
+      <img class="grafiek" src="/images/grafiek.jpg" alt="grafiek">
+    </div>
+
+    <ul class="function--card__list">
+      {{#each feedback }}
+      <li class="function__item--review">
+        <div class="function__item--top">
+          <p>
+            Datum: 
+            {{#setEpochToDate recording.date }}{{/setEpochToDate}}
+          </p>
+          <p>
+            Categorie: 
+            {{#each recording.categories}}
+              {{ name }}
+            {{/each}}
+          </p>
+          <p>
+            Reviewer: 
+            {{ reviewer.firstname }} {{ reviewer.lastname }}
+          </p>
+          <button class="arrow-btn"><img class="arrow" src="/images/arrow-up.svg" alt="arrowup"></button>
+        </div>
+
+        <div class="function__item--bottom">
+          <form>
+
+            <div class="feedback__tabel function--card function--card--light">
+
+{{>feedback-table }}
+
+            </div>
+
+
+            <div class="feedback__tekst function--card function--card--light">
+              <label for="comment">
+                Bijkomende opmerkingen:
+              </label>
+
+              <textarea name="comment" id="comment" disabled>{{ feedback.comment }}</textarea>
+            </div>
+          </form>
+        </div>
+
+      </li>
+      {{#if feedback.feedback }}
+        <p>Deze persoon heeft nog geen feedback</p>
+      {{/if}}
+      {{/each }}
+
+    </ul>
+
+  </section>
+
+</section>

@@ -1,0 +1,29 @@
+<section class="login-container">
+<div class="login-container-left">
+    
+</div>
+<div class="auth-container login">
+    <div class="logo-container">
+        <img src="/images/logoNoodcentrale.png" alt="logo">
+        <div>
+        <h4>Welkom!</h4>
+        <p>Beluister oproepen en geef feedback</p>
+        </div>
+    </div>
+    
+    
+    
+    {{>form-errors this}}
+    <form method="post" action="/login">
+        {{#each inputs}}
+        {{>form-input this}}
+        {{/each}}
+        <div class="footer-container">
+            <input type="submit" class="btn btn-primary" value="Inloggen">
+        </div>
+    </form>
+</div>
+</section>
+
+
+

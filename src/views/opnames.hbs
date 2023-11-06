@@ -1,0 +1,80 @@
+<section class="main-container main-container--opnames">
+  <a class="breadcrumb__link" href="/">Dashboard /</a><a class="breadcrumb__link breadcrumb__link--dark" href="#">
+    Opnames</a>
+
+  <section class="opnames__top">
+    <h2>Opnames</h2>
+    <form class="searchbar" id="form">
+      <input class="searchbar--block" type="search" id="query" name="q" placeholder="🔎 Zoeken">
+    </form>
+  </section>
+  <hr>
+
+<section class="tabel">
+  <p class="function__name--small function__name--gap">Operator</p>
+  <p class="function__date"> Datum</p>
+  <p class="function__category">Categorie</p>
+  <div class="checkbox-container">
+    <p>Reviews</p>
+  </div>
+  
+  <div class="buttons-container">
+    <p></p>
+  </div>
+</section>
+
+  
+
+  <section>
+    <ul class="function--card__list">
+      
+      {{#each recordingItems }}
+      <li class="function__item function__item--small {{#if (ifEven @key) }}function__item--even{{/if}}">
+        
+      <div>
+        <p class="function__name function__name--small function__name--gap">
+          {{ operator.firstname }} {{ operator.lastname }}
+        </p>
+      </div>
+        
+      <div>
+        <p class="function__date">
+          {{#setEpochToDate date }}{{/setEpochToDate}}
+        </p>
+      </div>
+
+      
+      <div>
+        <p class="function__category">
+        {{#each categories}}
+          {{ name }}
+        {{/each}}
+        </p>
+      </div>
+        
+
+        
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="reviewed" name="reviewed" value="reviewed" disabled {{#if feedbacks}}checked{{/if}}>
+          {{#unless feedbacks}}
+          <label for="checkbox">Wachten op feedback</label><br>
+          {{/unless}}
+        </div>
+
+        <div class="buttons-container">
+          {{#if feedbacks}}
+          <a class="function__button function__button--blue" href="opnames/opname-review-detail/{{ id }}">
+            bekijken
+          </a>
+          {{/if}}
+
+          <a class="function__button" href="opnames/opname-review/{{id}}">
+            Feedback
+          </a>
+        </div>
+
+      </li>
+      {{/each}}
+    </ul>
+  </section>

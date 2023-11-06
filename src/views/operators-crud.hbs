@@ -1,0 +1,55 @@
+<section class="main-container main-container--opnames">
+<a class="breadcrumb__link" href="/admin">Dashboard /</a><a class="breadcrumb__link breadcrumb__link--dark" href="#"> Operatoren</a>
+
+<section class="opnames__top">
+<h2>Operatoren</h2>
+<form class="searchbar" id="form"> 
+  <input class="searchbar--block" type="search" id="query" name="q" placeholder="🔎 Naam">
+</form>
+</section>
+<hr>
+
+<h3>Operator toevoegen</h3>
+<form class="function__item" action="/api/operators" method="post">
+    <div class="function__item--first">
+          <input type="text" placeholder="firstname" name="firstname" class="function__name function__name--gap" required>
+            
+          </input>
+          <input type="text" placeholder="lastname" name="lastname" class="function__name function__name--gap" required>
+            
+          </input>
+          <input type="email" placeholder="email" name="email" class="function__email" required>
+            
+          </input>
+    </div>
+    <button type="submit" class="function__button function__button--icon funtion__button--green">
+      <img src="../images/plus.svg" alt="plus">
+    </button>   
+  </form>
+  <hr>
+<h3>Operator bewerken</h3>
+<ul class="function--card__list">
+{{#each operatorItems }}
+  <li id="list{{id}}" class="function__item {{#if (ifEven @key) }}function__item--even{{/if}}">
+    <div class="function__item--first">
+      <input id="firstname{{id}}" class="function__name function__name--gap test" value="{{firstname}}" disabled></input>
+      <input id="lastname{{id}}" class="function__name function__name--gap test" value="{{lastname}}" disabled></input>
+      <input id="email{{id}}" class="function__email test" value={{email}} disabled></input>
+      <button id="confirm{{id}}" class="function__button function__button--icon funtion__button--green" style="display: none;" onclick="confirmEdit({{id}}, '/operators')">
+        <img src="../images/plus.svg" alt="confirm">
+      </button>
+      <button id="edit{{id}}" class="function__button function__button--icon" onclick="edit({{id}})">
+        <img src="../images/edit.svg" alt="edit">
+      </button>
+      <button id="cancel{{id}}" class="function__button function__button--icon function__button--red" style="display: none;" onclick="cancelEdit({{id}})">
+        <img src="../images/arrowside.svg" alt="cancel">
+      </button>
+    </div>
+      
+      <button class="function__button function__button--icon function__button--red" onclick="deleteOperator({{id}})">
+        <img src="../images/delete.svg" alt="trashcan">
+      </button>   
+  </li>
+{{/each}}
+</ul>
+</section>

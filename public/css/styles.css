@@ -1,0 +1,244 @@
+/*import other css files*/
+
+@import url("reset.css");
+
+:root {
+  --background-color: hsl(0, 0%, 100%);
+  --secondary-background-color: hsla(0, 0%, 11%, 0.07);
+  --tertiary-background-color: hsla(0, 0%, 0%, 0.05);
+
+  --text-color: hsl(0, 0%, 18%);
+  --active-color: hsl(240, 49%, 55%);
+  --hover-color: hsl(211, 61%, 62%);
+  --color-success: hsl(108, 75%, 44%);
+  --color-successHover: hsl(108, 78%, 33%);
+  --color-successHover: hsl(240, 49%, 45%);
+  --color-warning: hsl(60, 90%, 38%);
+  --color-warningHover: hsl(60, 87%, 31%);
+  --color-danger: hsl(0, 100%, 50%);
+  --color-dangerHover: hsl(0, 94%, 34%);
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+}
+
+/*Main body*/
+
+.main-container {
+  width: 100%;
+  padding-left: 3rem;
+  padding-right: 5.125rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
+}
+
+hr {
+  margin-top: 1rem;
+}
+
+/*Dashboard*/
+
+.list-container {
+  background-color: var(--secondary-background-color);
+}
+
+.function--card {
+  background-color: var(--tertiary-background-color);
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 8px 8px 20px hsla(0, 0%, 0%, 0.1);
+}
+
+.function--card__list {
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.function--card__title {
+  font-weight: normal;
+  font-size: large;
+  padding-top: 1rem;
+}
+
+.function__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsla(0, 0%, 11%, 0.09);
+  padding: 0.2rem;
+  padding-left: 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  height: 3rem;
+}
+
+.function__item--even {
+  background-color: var(--background-color);
+}
+
+/*Opnames pagina*/
+
+.opnames__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.breadcrumb__link {
+  font-size: small;
+  color: var(--active-color);
+  text-decoration: none;
+}
+
+.breadcrumb__link--dark {
+  color: var(--text-color);
+}
+
+.main-container--opnames {
+  margin-top: 3rem;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar--block {
+  border-radius: 4px;
+  padding: 0.4rem;
+}
+
+.tabel {
+  display: flex;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+
+.tabel--operator {
+justify-content: left;
+}
+
+.function__item--small {
+  font-size: smaller;
+}
+
+.function__name--gap {
+  width: 14rem;
+}
+
+.function__email {
+  width: 25rem;
+}
+
+.function__date {
+  width: 10rem;
+}
+
+.function__category {
+  width: 10rem;
+}
+
+.checkbox-container {
+  text-align: left;
+  width: 14rem;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: right;
+  min-width: 14rem;
+}
+
+/*Operatoren pagina*/
+
+.function__item--first {
+  display: flex;
+}
+
+/*operator-detail-pagina*/
+
+.img--container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.grafiek {
+  justify-content: center;
+}
+
+.arrow-btn {
+  background-color: var(--color-successHover);
+  width: 57.84px;
+  height: 46px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.function__item--review {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 11%, 0.09);
+  border-radius: 4px;
+  padding: 0.2rem;
+  align-items: center;
+}
+
+.function__item--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.function--card--light {
+  background-color: inherit;
+  box-shadow: none;
+}
+
+.function__item--bottom {
+  position: absolute;
+  top: -1000px;
+  opacity: 0;
+}
+
+.show-review {
+  position: static;
+  opacity: 1;
+}
+
+.arrow-btn {
+  transform: rotate(0deg);
+}
+
+.rotate-btn {
+  background-color: var(--hover-color);
+  transform: rotate(180deg);
+}
+/*admin categories page*/
+.form--category {
+  display: flex;
+}

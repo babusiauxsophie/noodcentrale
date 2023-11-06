@@ -1,0 +1,19 @@
+<!-- navigation -->
+<section class="navigation">
+<img src="/images/logoNoodcentrale.png" alt="logo">
+<h2>Welkom!</h2>
+<h3>Admin {{ user.firstname }}</h3>
+<nav>
+    <ul>
+        {{#each data.admin }}
+            <li class="nav__item {{#if isActive }}nav__item--active{{/if}}">
+                <img  class="nav__icon" src="{{ icon }}" alt="{{ name }}"> 
+                <a class="nav__link" href="{{ url }}" target="{{ target }}">
+                    {{ name }}
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+</nav>
+</section>
+

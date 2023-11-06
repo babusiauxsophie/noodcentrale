@@ -1,0 +1,17 @@
+<!-- recente reviews -->
+<section class="function--card">
+  <h2>Recent gemaakte reviews</h2>
+  <hr>
+  <ul class="function--card__list">
+    {{#each (reverseArray feedbacksByReviewerId ) }}
+      <li class="function__item {{#if (ifEven @key) }}function__item--even{{/if}}">
+        <p class="function__name function__name--gap">{{ recording.operator.firstname }} {{ recording.operator.lastname }}</p>
+        <p>{{#setEpochToDate recording.date }}{{/setEpochToDate}}</p>
+        <p>{{#each recording.categories}} {{name}} {{/each}}</p>
+        <a class="function__button function__button--blue" href="/opnames/opname-review-detail/{{recording.id}}#{{id}}">
+        Bekijken
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</section>

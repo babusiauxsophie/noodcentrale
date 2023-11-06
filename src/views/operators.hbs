@@ -1,0 +1,35 @@
+<section class="main-container main-container--opnames">
+<a class="breadcrumb__link" href="/">Dashboard /</a><a class="breadcrumb__link breadcrumb__link--dark" href="#"> Operatoren</a>
+
+<section class="opnames__top">
+<h2>Operatoren</h2>
+<form class="searchbar" id="form"> 
+  <input class="searchbar--block" type="search" id="query" name="q" placeholder="🔎 Naam">
+</form>
+</section>
+<hr>
+
+<section class="tabel tabel--operator">
+<p class="function__name--small function__name--gap">Operator</p>
+<p class="function__email">Email</p>
+</section>
+
+<ul class="function--card__list">
+{{#each operatorItems }}
+  <li class="function__item {{#if (ifEven @key) }}function__item--even{{/if}}">
+    <div class="function__item--first">
+          <p class="function__name function__name--gap">
+            {{ firstname }} {{ lastname }}
+          </p>
+          
+          <p class="function__email">
+            {{ email }}
+          </p>
+    </div>
+          <a class="function__button function__button--icon" href="operatoren/{{id}}">
+            <img src="images/path.svg" alt="lookingglass">
+          </a>   
+  </li>
+{{/each}}
+</ul>
+</section>

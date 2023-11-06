@@ -1,0 +1,22 @@
+<!-- Feedback planner -->
+<Section class="function--card">
+  <h2>Functioneringsgesprek plannen</h2>
+  <h4 class="function--card__title">Deze medewerkers hebben al even geen feedback gekregen!</h4>
+  <ul class="function--card__list">
+    {{#each (limit operatorItems 5)}}
+      {{#if (ifTime lastReviewed)}}
+        <li class="function__item {{#if (ifEven @key) }}function__item--even{{/if}}">
+          <p class="function__name">
+            {{ firstname }} {{ lastname }}
+          </p>
+          <a class="function__button" href="mailto:{{email}}">
+            Email
+          </a>
+        </li>
+      {{/if}}
+      {{#else}}
+        <h4 class="function--card__title">Alle medewerkers hebben recent feedback gekregen!</h4>
+      {{/else}}
+    {{/each}}
+  </ul>
+</Section>
