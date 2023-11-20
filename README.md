@@ -1,7 +1,5 @@
 # project-3---werkstuk-noodcentrale-bavo-sophie-mardoek
 
-project-3---werkstuk-noodcentrale-bavo-sophie-mardoek created by GitHub Classroom
-
 Introductie:
 Voor het vak @work2 hebben we een applicatie gemaakt voor de Noodcentrale.
 De Noodcentrale heeft personeelsleden die gemaakte opnames moet beluisteren om feedback te kunnen geven op de operatoren.
