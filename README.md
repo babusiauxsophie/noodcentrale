@@ -1,11 +1,11 @@
 # project-3---werkstuk-noodcentrale-bavo-sophie-mardoek
 
-Introductie:
+## Introductie:
 Voor het vak @work2 hebben we een applicatie gemaakt voor de Noodcentrale.
 De Noodcentrale heeft personeelsleden die gemaakte opnames moet beluisteren om feedback te kunnen geven op de operatoren.
 Deze reviews willen ze per operator kunnen raadplegen met de bedoeling deze feedback te kunnen gebruiken tijdens functioneringsgesprekken. 
 
-Installatie:
+## Installatie:
 Deze applicatie maakt gebruik van meerdere node packages.
 1. Voor de server gebruiken we Express (https://www.npmjs.com/package/express).
 2. Voor de templating installeerde we handlebars en express-handlebars (https://www.npmjs.com/package/handlebars)(https://www.npmjs.com/package/     express-handlebars).
@@ -14,6 +14,17 @@ Om te kunnen inloggen hebben we gebruik gemaakt van bcrypt om de wachtwoorden te
 en jsonwebtoken voor de beveiliging. (https://www.npmjs.com/package/jsonwebtoken).
 4. Voor het seeden van data, gebruikten we de structuur van de slides & code van pgm-3 (week7), de packages van toepassing hier zijn dan faker.js (https://www.npmjs.com/package/@faker-js/faker)
 5. Om onze API structuur te documenteren hebben we Swagger gebruikt (https://swagger.io/docs/specification/about/). De documentatie kan je terugvinden op http://localhost:3000/api-docs/
+
+## Seeding
+Om de databank te vullen met fajer-js data voer je volgende commands uit:
+ npm run seed -- --factory=category  //standalone en hardcoded aantal
+ npm run seed -- --factory=role //standalone en hardcoded aantal
+ npm run seed -- --factory=operator --amount=25 //standalone
+ npm run seed -- --factory=reviewer --amount=25 //hangt af van role, dus eerst role seeden (25 is variabel)
+ npm run seed -- --factory=recording --amount=25 //hangt af van operator, dus eerst operators seeden
+ npm run seed -- --factory=feedback --amount=25 //hangt af van recording en reviewer, dus eerst die seeden
+ npm run seed -- --factory=category_recording //hangt af van category en recording, dus eerst die seeden
+
 
 
 Features:
