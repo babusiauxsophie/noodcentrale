@@ -17,17 +17,23 @@ en jsonwebtoken voor de beveiliging. (https://www.npmjs.com/package/jsonwebtoken
 
 ## Seeding
 Om de databank te vullen met fajer-js data voer je volgende commands uit:
- npm run seed -- --factory=category  //standalone en hardcoded aantal
- npm run seed -- --factory=role //standalone en hardcoded aantal
- npm run seed -- --factory=operator --amount=25 //standalone
- npm run seed -- --factory=reviewer --amount=25 //hangt af van role, dus eerst role seeden (25 is variabel)
- npm run seed -- --factory=recording --amount=25 //hangt af van operator, dus eerst operators seeden
- npm run seed -- --factory=feedback --amount=25 //hangt af van recording en reviewer, dus eerst die seeden
- npm run seed -- --factory=category_recording //hangt af van category en recording, dus eerst die seeden
+
+ npm run seed -- --factory=category
+ 
+ npm run seed -- --factory=role 
+ 
+ npm run seed -- --factory=operator --amount=25
+ 
+ npm run seed -- --factory=reviewer --amount=25
+ 
+ npm run seed -- --factory=recording --amount=25
+ 
+ npm run seed -- --factory=feedback --amount=25
+ 
+ npm run seed -- --factory=category_recording
 
 
-
-Features:
+## Features:
 De app heeft een aanmeld pagina, hierna komt een reviewer op zijn persoonlijk dashboard terecht.
 Een reviewer kan op zijn dashboard operatoren emails versturen om een functiegesprek in te plannen. Ook kan een reviewer zijn recent gemaakte reviews bekijken.
 Een reviewer kan een lijst opnames openen en doorklikken om feedback te geven op een opname. Ook kan hij gemaakte reviews via hier openen.
@@ -41,5 +47,5 @@ Ten slotte kan hij op de categorien pagina nieuwe categorien toevoegen, editen o
 Er zijn endpoints beschikbaar voor de models op een RESTFUL manier.
 Er is een seeder voorzien om de databank te vullen met data.
 
-Author:
+## Author:
 Bavo Beaumon, Sophie Babusiaux, Mardoek Thienpondt
